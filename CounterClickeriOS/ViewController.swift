@@ -12,18 +12,39 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var counterDisplay: UIButton!
     
+    
     var totalClicks: Int = 0
     var player = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Swipe gestures for moving between view controllers.
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeFunc(gesture:)))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeFunc(gesture:)))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
     }
     
-    func updateUI () {
-        self.counterDisplay.setTitle("\(totalClicks)", for: .normal)
+    @objc func swipeFunc(gesture: UISwipeGestureRecognizer) {
+        if gesture.direction == .right {
+            print("Swiped Right")
+            performSegue(withIdentifier: "right", sender: self)
+        }
+        else if gesture.direction == .left {
+            print("Swiped Left")
+            performSegue(withIdentifier: "left", sender: self)
     }
-
+    }
+    
+    
+    // +1 View
+    
     @IBAction func clickerClickedPlusOne(_ sender: UIButton) {
         totalClicks = totalClicks + 1
         updateUI()
@@ -36,24 +57,28 @@ class ViewController: UIViewController {
         playSound(soundName: "click")
     }
     
-    @IBAction func clickerClickedPlusTen(_ sender: UIButton) {
-        totalClicks = totalClicks + 10
-        updateUI()
-        playSound(soundName: "click")
-    }
-    
-    @IBAction func clickerClickedMinusTen(_ sender: UIButton) {
-        totalClicks = totalClicks - 10
-        updateUI()
-        playSound(soundName: "click")
-    }
-    
     @IBAction func resetCounter(_ sender: UIButton) {
+        resetTotal()
+    }
+    
+    
+    
+    
+    // Updates total clicks.
+    
+    func updateUI () {
+        self.counterDisplay.setTitle("\(totalClicks)", for: .normal)
+    }
+
+    // Reset total clicks.
+    
+    func resetTotal() {
         totalClicks = 0
         updateUI()
         playSound(soundName: "reset-click")
     }
     
+    // Play sound.
     
     func playSound(soundName : String) {
 
@@ -69,4 +94,3 @@ class ViewController: UIViewController {
     }
     
 }
-
