@@ -54,7 +54,6 @@ class ViewController: UIViewController {
            }
    }
     
-    // +1 View
     
     @IBAction func clickerClickedPlusOne(_ sender: UIButton) {
         totalClicks = totalClicks + 1
