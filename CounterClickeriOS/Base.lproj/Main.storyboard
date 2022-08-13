@@ -62,7 +62,8 @@
                     <navigationItem key="navigationItem" id="s1o-Hl-y9x"/>
                     <connections>
                         <outlet property="counterDisplay" destination="ECG-cF-X2k" id="bfs-1q-Rbk"/>
-                        <segue destination="m1R-pN-thL" kind="presentation" identifier="left" id="EdX-bc-SvO"/>
+                        <segue destination="m1R-pN-thL" kind="show" identifier="left" id="EdX-bc-SvO"/>
+                        <segue destination="m1R-pN-thL" kind="show" identifier="right" id="rGr-3F-8I8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -125,14 +126,19 @@
                     <navigationItem key="navigationItem" id="Li5-kU-b7J"/>
                     <connections>
                         <outlet property="counterDisplayTwo" destination="cQe-Iy-Qar" id="mpY-2o-VoA"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="right" id="3RE-O8-HEP"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="left" id="3RE-O8-HEP"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="right" id="ehD-Nf-ivD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Idh-PU-jjm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="793" y="76"/>
+            <point key="canvasLocation" x="1090" y="25"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="rGr-3F-8I8"/>
+        <segue reference="3RE-O8-HEP"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
