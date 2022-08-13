@@ -42,6 +42,20 @@ class PlusTwoViewController: UIViewController {
     }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "right" {
+            if let destination = segue.destination as? ViewController {
+                destination.totalClicks = self.totalClicks
+                }
+                }
+         if segue.identifier == "left" {
+            if let destination = segue.destination as? ViewController {
+                destination.totalClicks = self.totalClicks
+            }
+            }
+    }
+    
+    
     @IBAction func clickerClickerPlusTwo(_ sender: UIButton) {
         totalClicks = totalClicks + 2
         updateUI()
