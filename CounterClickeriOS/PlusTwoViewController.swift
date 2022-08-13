@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PlusTwoViewController.swift
 //  CounterClickeriOS
 //
 //  Created by Simon Vincent on 13/08/2022.
@@ -8,15 +8,16 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class PlusTwoViewController: UIViewController {
     
-    @IBOutlet weak var counterDisplay: UIButton!
+    @IBOutlet weak var counterDisplayTwo: UIButton!
     
     var totalClicks: Int = 0
     var player = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
         
         // Swipe gestures for moving between view controllers.
@@ -41,29 +42,26 @@ class ViewController: UIViewController {
     }
     }
     
-    
-    // +1 View
-    
-    @IBAction func clickerClickedPlusOne(_ sender: UIButton) {
-        totalClicks = totalClicks + 1
+    @IBAction func clickerClickerPlusTwo(_ sender: UIButton) {
+        totalClicks = totalClicks + 2
         updateUI()
         playSound(soundName: "click")
     }
     
-    @IBAction func clickerClickedMinusOne(_ sender: UIButton) {
-        totalClicks = totalClicks - 1
+    @IBAction func clickerClickedMinusTwo(_ sender: UIButton) {
+        totalClicks = totalClicks - 2
         updateUI()
         playSound(soundName: "click")
     }
     
-    @IBAction func resetCounter(_ sender: UIButton) {
+    @IBAction func resetTotalTwo(_ sender: UIButton) {
         resetTotal()
     }
     
     // Updates total clicks.
     
     func updateUI () {
-        self.counterDisplay.setTitle("\(totalClicks)", for: .normal)
+        self.counterDisplayTwo.setTitle("\(totalClicks)", for: .normal)
     }
 
     // Reset total clicks.
@@ -89,4 +87,5 @@ class ViewController: UIViewController {
 }
     }
     
+
 }

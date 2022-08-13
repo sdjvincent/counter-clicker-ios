@@ -52,7 +52,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickerClickedPlusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zxW-Zm-vLg"/>
+                                    <action selector="clickerClickedPlusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x10-Nc-CbB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="22" y="76"/>
         </scene>
-        <!--View Controller-->
+        <!--Plus Two View Controller-->
         <scene sceneID="IWQ-cQ-bkc">
             <objects>
-                <viewController id="m1R-pN-thL" sceneMemberID="viewController">
+                <viewController id="m1R-pN-thL" customClass="PlusTwoViewController" customModule="CounterClickeriOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w0W-bi-xVj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +86,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="ClickerClickedPlusTwo:" destination="SIX-BM-BYs" eventType="touchUpInside" id="gfw-3B-WpO"/>
+                                    <action selector="clickerClickerPlusTwo:" destination="m1R-pN-thL" eventType="touchUpInside" id="8eZ-mb-4ZQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abj-9d-y5U">
@@ -101,7 +101,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="clickerClickedMinusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNz-XJ-9tt"/>
-                                    <action selector="clickerClickedMinusTwo:" destination="SIX-BM-BYs" eventType="touchUpInside" id="KjP-oN-cSp"/>
+                                    <action selector="clickerClickedMinusTwo:" destination="m1R-pN-thL" eventType="touchUpInside" id="Wd9-cv-9Xf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgQ-h5-s9v">
@@ -114,8 +114,8 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="clickerClickedMinusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KHA-HK-ccJ"/>
-                                    <action selector="resetCounter2:" destination="SIX-BM-BYs" eventType="touchUpInside" id="Opi-dv-dPY"/>
                                     <action selector="resetCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7qa-AM-SHi"/>
+                                    <action selector="resetTotalTwo:" destination="m1R-pN-thL" eventType="touchUpInside" id="bc3-hg-9ci"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -124,11 +124,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="Li5-kU-b7J"/>
                     <connections>
+                        <outlet property="counterDisplayTwo" destination="cQe-Iy-Qar" id="mpY-2o-VoA"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="right" id="3RE-O8-HEP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Idh-PU-jjm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="SIX-BM-BYs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="793" y="76"/>
         </scene>
