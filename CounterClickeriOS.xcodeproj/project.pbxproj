@@ -13,6 +13,8 @@
 		8BFAB7E328A7B208003CBFBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BFAB7E128A7B208003CBFBF /* Main.storyboard */; };
 		8BFAB7E528A7B209003CBFBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BFAB7E428A7B209003CBFBF /* Assets.xcassets */; };
 		8BFAB7E828A7B209003CBFBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BFAB7E628A7B209003CBFBF /* LaunchScreen.storyboard */; };
+		8BFAB7F128A7BD13003CBFBF /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BFAB7EF28A7BD13003CBFBF /* click.mp3 */; };
+		8BFAB7F228A7BD13003CBFBF /* reset-click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BFAB7F028A7BD13003CBFBF /* reset-click.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8BFAB7E428A7B209003CBFBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BFAB7E728A7B209003CBFBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BFAB7E928A7B209003CBFBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BFAB7EF28A7BD13003CBFBF /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = click.mp3; path = Assets.xcassets/click.dataset/click.mp3; sourceTree = "<group>"; };
+		8BFAB7F028A7BD13003CBFBF /* reset-click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "reset-click.mp3"; path = "Assets.xcassets/reset-click.dataset/reset-click.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				8BFAB7DD28A7B208003CBFBF /* SceneDelegate.swift */,
 				8BFAB7DF28A7B208003CBFBF /* ViewController.swift */,
 				8BFAB7E128A7B208003CBFBF /* Main.storyboard */,
+				8BFAB7EF28A7BD13003CBFBF /* click.mp3 */,
+				8BFAB7F028A7BD13003CBFBF /* reset-click.mp3 */,
 				8BFAB7E428A7B209003CBFBF /* Assets.xcassets */,
 				8BFAB7E628A7B209003CBFBF /* LaunchScreen.storyboard */,
 				8BFAB7E928A7B209003CBFBF /* Info.plist */,
@@ -126,7 +132,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BFAB7E828A7B209003CBFBF /* LaunchScreen.storyboard in Resources */,
+				8BFAB7F128A7BD13003CBFBF /* click.mp3 in Resources */,
 				8BFAB7E528A7B209003CBFBF /* Assets.xcassets in Resources */,
+				8BFAB7F228A7BD13003CBFBF /* reset-click.mp3 in Resources */,
 				8BFAB7E328A7B208003CBFBF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
