@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        try! AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient)
+        
    }
     
     @IBAction func indexChanged(_ sender: Any) {
