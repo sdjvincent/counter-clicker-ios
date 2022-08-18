@@ -11,58 +11,51 @@ import AVFoundation
 class ViewController: UIViewController {
     
     @IBOutlet weak var counterDisplay: UIButton!
+    @IBOutlet weak var minusAmountDisplay: UIButton!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var totalClicks: Int = 0
+    var plusAmount: Int = 1
     var player = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        // Swipe gestures for moving between view controllers.
-        
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeFunc(gesture:)))
-        swipeRight.direction = .right
-        self.view.addGestureRecognizer(swipeRight)
-        
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeFunc(gesture:)))
-        swipeLeft.direction = .left
-        self.view.addGestureRecognizer(swipeLeft)
-    }
-    
-    @objc func swipeFunc(gesture: UISwipeGestureRecognizer) {
-        if gesture.direction == .right {
-            print("Swiped Right")
-            performSegue(withIdentifier: "right", sender: self)
-        }
-        else if gesture.direction == .left {
-            print("Swiped Left")
-            performSegue(withIdentifier: "left", sender: self)
-    }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "right"{
-            if let destination = segue.destination as? PlusTwoViewController {
-                destination.totalClicks = self.totalClicks
-                }
-                }
-        if segue.identifier == "left" {
-           if let destination = segue.destination as? PlusTwoViewController {
-               destination.totalClicks = self.totalClicks
-           }
-           }
    }
+    
+    @IBAction func indexChanged(_ sender: Any) {
+        switch segmentedControl.selectedSegmentIndex
+        {
+            case 0:
+            minusAmountDisplay.setTitle("-1", for: .normal)
+            counterDisplay.setTitle("+1", for: .normal)
+            plusAmount = 1
+            case 1:
+            minusAmountDisplay.setTitle("-2", for: .normal)
+            counterDisplay.setTitle("+2", for: .normal)
+            plusAmount = 2
+            case 2:
+            minusAmountDisplay.setTitle("-5", for: .normal)
+            counterDisplay.setTitle("+5", for: .normal)
+            plusAmount = 5
+            case 3:
+            minusAmountDisplay.setTitle("-10", for: .normal)
+            counterDisplay.setTitle("+10", for: .normal)
+            plusAmount = 10
+            default:
+                break
+            }
+    }
     
     
     @IBAction func clickerClickedPlusOne(_ sender: UIButton) {
-        totalClicks = totalClicks + 1
+        totalClicks = totalClicks + plusAmount
         updateUI()
         playSound(soundName: "click")
     }
     
     @IBAction func clickerClickedMinusOne(_ sender: UIButton) {
-        totalClicks = totalClicks - 1
+        totalClicks = totalClicks - plusAmount
         updateUI()
         playSound(soundName: "click")
     }
@@ -76,7 +69,7 @@ class ViewController: UIViewController {
     func updateUI () {
         self.counterDisplay.setTitle("\(totalClicks)", for: .normal)
     }
-
+    
     // Reset total clicks.
     
     func resetTotal() {
@@ -95,9 +88,8 @@ class ViewController: UIViewController {
                 do {
                     player = try AVAudioPlayer(contentsOf: url)
                     player.play()
-                } catch {
-                    //couldn't load file :(
-}
+                    } catch {
+    }
     }
     
 }
