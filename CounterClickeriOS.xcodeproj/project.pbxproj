@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B62050828A82E6900BA6483 /* PlusTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62050728A82E6900BA6483 /* PlusTwoViewController.swift */; };
 		8BFAB7DC28A7B208003CBFBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFAB7DB28A7B208003CBFBF /* AppDelegate.swift */; };
 		8BFAB7DE28A7B208003CBFBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFAB7DD28A7B208003CBFBF /* SceneDelegate.swift */; };
 		8BFAB7E028A7B208003CBFBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFAB7DF28A7B208003CBFBF /* ViewController.swift */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8B62050728A82E6900BA6483 /* PlusTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusTwoViewController.swift; sourceTree = "<group>"; };
 		8BFAB7D828A7B208003CBFBF /* CounterClickeriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterClickeriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFAB7DB28A7B208003CBFBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BFAB7DD28A7B208003CBFBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 				8BFAB7DB28A7B208003CBFBF /* AppDelegate.swift */,
 				8BFAB7DD28A7B208003CBFBF /* SceneDelegate.swift */,
 				8BFAB7DF28A7B208003CBFBF /* ViewController.swift */,
-				8B62050728A82E6900BA6483 /* PlusTwoViewController.swift */,
 				8BFAB7E128A7B208003CBFBF /* Main.storyboard */,
 				8BFAB7EF28A7BD13003CBFBF /* click.mp3 */,
 				8BFAB7F028A7BD13003CBFBF /* reset-click.mp3 */,
@@ -152,7 +149,6 @@
 				8BFAB7E028A7B208003CBFBF /* ViewController.swift in Sources */,
 				8BFAB7DC28A7B208003CBFBF /* AppDelegate.swift in Sources */,
 				8BFAB7DE28A7B208003CBFBF /* SceneDelegate.swift in Sources */,
-				8B62050828A82E6900BA6483 /* PlusTwoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
